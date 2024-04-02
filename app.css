@@ -1,0 +1,110 @@
+:root {
+    --primary-color: rgb(220, 162, 220);
+    --secodary-color: rgb(152, 147, 84);
+}
+
+* {
+    box-sizing:  border-box;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin-left: 150px;
+    margin-right: auto;
+}
+
+body{
+    background-image: url('1.jpg');
+    background-color:  rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #000000;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 20px 10px;
+}
+
+.search::placeholder {
+    color: rgb(255, 0, 183);
+}
+
+.search.search:focus{
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.movie {
+    width: 300px;
+    margin: 10px;
+    background-color: #000000;
+    box-shadow: 0 4px 5px rgba(255, 0, 217, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 30%;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 30px;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: #ff00b3;
+    padding: 20px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color: rgb(244, 244, 244);
+}
+
+.movie-info span.orange{
+    color: orange;
+}
+
+.movie-info span.red{
+    color: red;
+}
+
+.overview {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0)
+}
